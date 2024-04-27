@@ -7,33 +7,32 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* 수직 가운데 정렬을 위한 추가 속성 */
-    height: 30vh; /* 헤더를 화면 전체 높이로 설정 */
+    align-items: center; 
+    height: 30vh; 
 }
-input[type="text"]{
-    width: 300px; /* 원하는 크기로 조정 */
+input[type="text"] {
     height: 20px;
-    padding: 10px; /* 내부 여백 추가 */
-    font-size: 16px; /* 원하는 글꼴 크기로 조정 */
+    padding: 5px 10px; 
+    font-size: 16px;
 }
 
-
-section {
+#movieSection {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-auto-rows: 500px; */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
     justify-content: center;
-    grid-row-gap: 50px;
-    grid-column-gap: 10px;
-}
-
-.moviecard {
-    width: 400px;
-    height: 820px;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+  }
+  
+  .movieCard {
     background-color: white;
-    margin: 20px;
+    width: 360px;
+    height: 830px;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 20px;
-}
+  }
+  
 
+  
+  

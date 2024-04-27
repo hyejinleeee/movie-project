@@ -17,140 +17,21 @@
   <body>
     <header>
       <h1>Find your movies</h1>
-      <form action="/search" method="get">
-        <label for="">영화를 검색하세요</label>
-        <input type="text" id="movieName" placeholder="영화제목을 검색하세요" />
-        <button onclick="fetchData()">검색</button>
+      <form>
+        <input type="text" id="search" placeholder="영화제목을 검색하세요" />
+        <button id="searchBtn">검색</button>
       </form>
     </header>
-    <main> 
-    
-      <section>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
-        <article class="moviecard">
-          <img src="영화이미지URL" alt="영화 이미지" class="movieImage"/>
-          <p class="title">영화 제목</p>
-          <p class="overview">영화 요약 내용</p>
-          <p class="average">평점</p>
-        </article>
 
-        
+    <main>
+      <section id="movieSection">
+        <article class="movieCard">
+          <img src="영화이미지URL" alt="영화 이미지" class="movieImage" />
+          <p class="title"></p>
+          <p class="overview"></p>
+          <p class="average"></p>
+        </article>
       </section>
-     
     </main>
-    
   </body>
 </html>
