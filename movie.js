@@ -17,18 +17,18 @@ fetch(
     const movies = response.results;
     console.log(movies);
 
-    //카드 UI구현
-    const movieSection = document.getElementById("movieSection");
-    const movieCard = document.querySelectorAll(".movieCard");
+    //카드 구현
+     const movieSection = document.getElementById("movieSection");
+     const movieCards = document.querySelectorAll(".movieCard");
 
     //카드 만들고 section에 추가하는 함수 
     function showMovieCard(val = "") {
-      //html 기존카드 지우고 내용비우기
-      while (movieSection.firstChild) {
-        movieSection.removeChild(movieSection.firstChild);
-      }
-      movieCard.innerHTML = "";
-      //배열 반복문 돌면서 조건에 만족하는 카드만들고 append하기 
+      //html 기존카드 지우고 내용비우기    
+         while (movieSection.firstChild) {
+          movieSection.removeChild(movieSection.firstChild);
+         }
+      movieCards.innerHTML = "";
+      //배열 반복문 돌면서 조건에 만족하는 카드만들고 추가
       movies.forEach((movie) => {
         if (movie.title.toLowerCase().includes(val.toLowerCase())) {
           const card = document.createElement("article");
@@ -51,7 +51,7 @@ fetch(
     showMovieCard();
 
     // 검색기능
-    const searchInput = document.getElementById("search");
+    const searchInput = document.getElementById("searchInput");
     const searchBtn = document.getElementById("searchBtn");
 
     searchBtn.addEventListener("click", function (e) {

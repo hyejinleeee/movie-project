@@ -1,6 +1,6 @@
 body {
     font-family: "Hahmlet", serif;
-    background-color: rgba(48, 115, 28, 0.31);
+    background-color: rgba(246, 197, 152, 0.974);
 }
 
 header {   
@@ -9,11 +9,6 @@ header {
     justify-content: center;
     align-items: center; 
     height: 30vh; 
-}
-input[type="text"] {
-    height: 20px;
-    padding: 5px 10px; 
-    font-size: 16px;
 }
 
 #movieSection {
