@@ -15,36 +15,22 @@ fetch(
   .then((response) => {
     // fetch 요청이 완료된 후 movies에 데이터 할당
     const movies = response.results;
-    console.log(movies);
 
-    //카드 구현
-     const movieSection = document.getElementById("movieSection");
-     const movieCards = document.querySelectorAll(".movieCard");
-
-    //카드 만들고 section에 추가하는 함수 
+    const movieSection = document.querySelector("ul");
+    //조건에 맞는 카드를 생성하는 함수
     function showMovieCard(val = "") {
-      //html 기존카드 지우고 내용비우기    
-         while (movieSection.firstChild) {
-          movieSection.removeChild(movieSection.firstChild);
-         }
-      movieCards.innerHTML = "";
-      //배열 반복문 돌면서 조건에 만족하는 카드만들고 추가
+      movieSection.innerHTML = ""; // 검색했을때 원래 있던 카드 지우기
       movies.forEach((movie) => {
         if (movie.title.toLowerCase().includes(val.toLowerCase())) {
-          const card = document.createElement("article");
+          const card = document.createElement("li");
           card.classList.add("movieCard");
+          card.setAttribute("id", `${movie.id}`);
           card.innerHTML = `
             <img src='https://image.tmdb.org/t/p/w300${movie.poster_path}'/>
             <p>${movie.title}</p>
             <p>${movie.overview}</p>
             <p>Rating:${movie.vote_average}</p>`;
-          movieSection.appendChild(card); 
-          
-          //id alert
-          card.addEventListener("click", function () {
-            const movieId = movie.id;
-            alert(`ID: ${movieId}`);
-          });
+          movieSection.appendChild(card);
         }
       });
     }
@@ -58,6 +44,18 @@ fetch(
       const val = searchInput.value;
       e.preventDefault();
       showMovieCard(val);
+    });
+
+    //id 이벤트핸들러
+    movieSection.addEventListener("click", function (event) {
+      const target = event.target;
+      if (target === movieSection) return;
+
+      if (target.matches(".movieCard")) {
+        alert(`영화 id: ${target.id}`);
+      } else {
+        alert(`영화 id: ${target.parentNode.id}`);
+      }
     });
   })
   .catch((err) => console.error(err));
